@@ -1,50 +1,49 @@
-# React + TypeScript + Vite
+# Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a weather application built with React, TypeScript, and Vite. It allows users to search for weather information by city and displays the current weather conditions.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Configuration](#configuration)
+- [Scripts](#scripts)
+- [License](#license)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Search for weather information by city
+- Display current weather conditions
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. Clone the repository:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+   ```sh
+   git clone https://github.com/minhnguyen2x/weather-app.git
+   cd weather-app
+   ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+2. Install dependencies:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+   ```sh
+   npm install
+   ```
+
+3. Create a `.env` file in the root directory and add your OpenWeatherMap API key:
+
+   ```env
+   VITE_APP_HOST=your_app_host
+   VITE_APP_HOST_API_ENDPOINT=your_app_host_api_endpoint
+   VITE_APP_HOST_API_KEY=your_api_key_here
+   ```
+
+## Usage
+
+To start the development server, run:
+
+```sh
+npm run dev
 ```
