@@ -18,7 +18,15 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@shared/*": ["./src/shared/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@features/*": ["./src/features/*"],
+      "@root/*": ["./*"],
+      "@/*": ["./src/*"],
+    },
+    "baseUrl": "."
   },
   "include": ["src"]
 }
